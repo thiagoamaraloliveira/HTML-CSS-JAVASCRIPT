@@ -19,16 +19,19 @@ div.cabeca h1, div.cabeca h2 {
 }
 
 div.cabeca h2 {
-    font-size: 14px;
-    
-}
-div.menu {
+    font-size: 14px;    
 }
 
-div.home {
-    padding: 0 5% 0 5%;
-    margin: 0 15% 0 15%;
-    background-color: white;
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+li {
+    display: inline;
+    color: white;
+    padding: 0 5px 0 5px;
+    margin: 10px;
 }
 
 div.home h1,h2 {
@@ -46,7 +49,11 @@ p {
 img {
     
 }
-div.noticias,div.curiosidade {
-    margin: 0 15% 0 15%;
+div.noticias,div.curiosidade,div.home {
+    margin: 0 10px 0 10px;
     background-color: white;
+}
+picture {
+    
+    
 }
