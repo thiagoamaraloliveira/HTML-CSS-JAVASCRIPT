@@ -1,13 +1,32 @@
 body {
-    background-color: white;
+    background-color: #dddddd;
     color: rgba(0, 0, 0, 1);
 }
+
+div#interface {
+    width: 900px;
+    background-color: white;
+    margin: -20px auto 0px auto;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    padding: 10px ;
+}
+
 p {
     text-align: justify;
     text-indent: 50px;
 }
 
-/* Fortamação de imagens com legendas */
+header#cabecalho img#icone {
+    position: absolute;
+    left: 780px ;
+    top: 45px ;
+}
+
+header#cabecalho {
+    
+}
+
+/* Formatação de imagens com legendas */
 
 figure.foto-legenda {
     position: relative;
