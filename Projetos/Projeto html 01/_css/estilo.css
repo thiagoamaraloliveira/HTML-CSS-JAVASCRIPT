@@ -103,7 +103,7 @@ nav#menu ul {
     text-transform: uppercase ;
     position: absolute;
     top: -20px;
-    left: 300px;
+    left: 400px;
 }
 
 nav#menu li {
@@ -239,4 +239,14 @@ footer#rodape {
 
 footer#rodape p{
     text-align: center;
+}
+
+video#filme01{
+    width: 500px;
+    display: block;
+    margin: auto;
+}
+
+video#filme02 {
+    width: 350px;
 }
