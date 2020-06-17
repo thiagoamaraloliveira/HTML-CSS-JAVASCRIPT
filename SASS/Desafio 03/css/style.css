@@ -1,0 +1,9 @@
+.botao, .btn-follow {
+  padding: 15px;
+  border-width: 2px;
+  border-style: solid;
+  border-radius: 15px;
+  background-color: blue;
+  color: white;
+  text-align: center;
+}

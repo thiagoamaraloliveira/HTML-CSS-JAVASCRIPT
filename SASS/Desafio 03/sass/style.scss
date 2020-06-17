@@ -1,0 +1,16 @@
+$bt-bg: blue;
+$bt-color:white;
+
+.botao {
+    padding: 15px;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 15px;
+    background-color: $bt-bg;
+    color: $bt-color;
+    text-align: center;
+}
+
+.btn-follow{
+    @extend .botao;
+}
