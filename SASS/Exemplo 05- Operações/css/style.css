@@ -1,0 +1,47 @@
+h1 {
+  font-size: 7px;
+  font-size: 10px;
+}
+
+h2 {
+  font-size: 3px;
+}
+
+p {
+  font: 10px/8px bold italic serif;
+  width: 500px;
+  width: 1;
+  height: 250px;
+  margin-left: 9px;
+  font: italic bold 1.25;
+  font-size: 20px / 22px;
+}
+
+p {
+  font-size: 1px;
+}
+
+p {
+  color: #050709;
+}
+
+p {
+  color: #020406;
+}
+
+p {
+  color: rgba(255, 255, 0, 0.75);
+}
+
+/* ! String */
+p {
+  cursor: e-resize;
+}
+
+p:before {
+  content: "Eu tenho 12 moedas";
+}
+
+p:before {
+  content: "Eu tenho ";
+}

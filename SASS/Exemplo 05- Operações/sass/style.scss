@@ -1,0 +1,56 @@
+$base-size: 20px;
+$line-height: 22px;
+$font-size: 27px;
+
+$value: null;
+
+h1 {
+    font-size: 5px + 2;
+    font-size: 5px * 2;
+
+}
+
+h2 {
+    font-size: 5px - 2;
+}
+
+p{
+    font: 10px/8px bold italic serif;
+    $width: 1000px;
+    width: $width/2;
+    width: round(1.5)/2;
+    height: (500px/2) ;
+    margin-left: 5px + 8px/2px;
+    font: (italic bold (10px/8px));
+    font-size: #{$base-size} / #{$line-height};
+}
+
+p{
+    font-size: $font-size % 2;
+}
+
+p{
+    color: #010203 + #040506;
+  }
+
+p{
+    color: #010203 * 2;
+}
+
+p{
+    color: rgba(255,0,0,.75) + rgba(0,255,0,.75);
+}
+
+/* ! String */
+p {
+    cursor: e + -resize;
+  }
+
+p:before{
+    content: "Eu tenho #{2 + 10} moedas";
+
+}
+
+p:before{
+    content: "Eu tenho ";
+}
