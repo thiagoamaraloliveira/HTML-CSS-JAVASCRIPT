@@ -1,0 +1,37 @@
+@charset "UTF-8";
+body {
+  background: #64c864;
+}
+
+section {
+  background: rgba(100, 200, 100, 0.8);
+}
+
+section {
+  background: white;
+  /* !Vai clarear*/
+  background: #111111;
+  /* !Vai escurecer */
+  font-family: "Open Sans";
+  /* !Recebe string sem aspas e coloca aspas nela */
+  font-weight: bold;
+  /* !Recebe string com aspas e vai tirar as aspas */
+  padding: 4;
+  /* ! Contar a qt de caracteres */
+  font-family: "BOLD";
+  /* ! Transformar em Maiusculo */
+  font-family: "bold";
+  /* ! Transformar em Minusculo */
+  width: 400%;
+  /* ! Faz 2 funções - 1 retorna a qt de carav e 2 passa para % */
+  margin: 2;
+  /* ! Vai arendoundar */
+  margin: 3;
+  /* ! Joga o numero para cima */
+  margin: 2;
+  /* ! Joga o numero para baixo */
+}
+
+div {
+  width: 40%;
+}

@@ -1,0 +1,41 @@
+$red:100;
+$green: 200;
+$blue: 100;
+$alpha: 0.8;
+$color: #ddd;
+$amount: 80%;
+$font:Open Sans;
+$weight:"bold";
+$real_round:2.2;
+$real:2.5;
+
+@function calc-fluid ($target,$container){
+    @return ($target/$container) * 100%;
+
+}
+
+body{
+    background: rgb($red, $green,$blue);
+}
+
+section {
+    background: rgba($red, $green,$blue,$alpha) ;
+}
+
+section {
+    background: lighten($color, $amount); /* !Vai clarear*/
+    background: darken($color, $amount); /* !Vai escurecer */
+    font-family: quote($font);/* !Recebe string sem aspas e coloca aspas nela */
+    font-weight: unquote($weight); /* !Recebe string com aspas e vai tirar as aspas */
+    padding: str-length($weight);/* ! Contar a qt de caracteres */
+    font-family: to-upper-case($weight); /* ! Transformar em Maiusculo */
+    font-family: to-lower-case($weight); /* ! Transformar em Minusculo */
+    width: percentage(str-length($weight)); /* ! Faz 2 funções - 1 retorna a qt de carav e 2 passa para % */
+    margin: round($real_round);/* ! Vai arendoundar */
+    margin: ceil($real); /* ! Joga o numero para cima */
+    margin: floor($real); /* ! Joga o numero para baixo */
+} 
+
+div {
+    width: calc-fluid(400,1000 );
+}
