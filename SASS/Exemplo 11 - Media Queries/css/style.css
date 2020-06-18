@@ -1,0 +1,19 @@
+header {
+  padding: 3em;
+}
+
+@media (min-width: 768px) {
+  header {
+    padding: 2em;
+  }
+}
+
+.sidebar {
+  width: 40;
+}
+
+@media screen and (landscape) {
+  .sidebar {
+    width: 30%;
+  }
+}
