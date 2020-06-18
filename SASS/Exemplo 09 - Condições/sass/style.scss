@@ -1,0 +1,11 @@
+$template:blue;
+
+header {
+    @if ($template == dark) {
+        color: #000;
+    }@else if ($template == blue){
+        color: blue;
+    } @else {
+        color: red;
+    }
+}
