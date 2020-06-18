@@ -1,0 +1,29 @@
+/* ?de 1 ate que o valor seja 3*/
+@for $i from 1 through 3 {  
+    .item-#{$i} {
+        width: 2em * $i;
+    }
+} 
+
+/* ? de 1 ate que o valor seja menor que 3*/
+@for $i from 1 to 3 {
+    .item-#{$i} {
+        width: 2em * $i;
+    }
+}
+
+/* ? Each - para listas*/
+@each $animal in dog,cat,fish,bird {
+    .#{$animal}-icon {
+        background-image: url("imagens/#{$animal}.png");
+    }
+}
+
+$i: 6;
+@while $i > 0 {
+    .item-3{$i} {
+        width: 2em * $i;
+    }
+    $i: $i - 2;
+}
+

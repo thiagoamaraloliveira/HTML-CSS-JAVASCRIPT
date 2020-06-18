@@ -1,0 +1,38 @@
+/* ?de 1 ate que o valor seja 3*/
+.item-1 {
+  width: 2em;
+}
+
+.item-2 {
+  width: 4em;
+}
+
+.item-3 {
+  width: 6em;
+}
+
+/* ? de 1 ate que o valor seja menor que 3*/
+.item-1 {
+  width: 2em;
+}
+
+.item-2 {
+  width: 4em;
+}
+
+/* ? Each - para listas*/
+.dog-icon {
+  background-image: url("imagens/dog.png");
+}
+
+.cat-icon {
+  background-image: url("imagens/cat.png");
+}
+
+.fish-icon {
+  background-image: url("imagens/fish.png");
+}
+
+.bird-icon {
+  background-image: url("imagens/bird.png");
+}
