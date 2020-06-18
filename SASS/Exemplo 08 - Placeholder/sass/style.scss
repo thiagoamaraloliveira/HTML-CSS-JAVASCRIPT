@@ -1,0 +1,20 @@
+@mixin center {
+    display: block;
+    margin: 0 auto;
+}
+
+%center {
+    display: block;
+    margin: 0 auto;
+}
+
+div {
+    @extend %center;
+}
+p {
+    @extend %center;
+}
+
+div#2{
+    @extend %center;
+}
