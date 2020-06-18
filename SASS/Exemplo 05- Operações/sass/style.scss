@@ -52,5 +52,5 @@ p:before{
 }
 
 p:before{
-    content: "Eu tenho ";
+    content: "Eu tenho #{$value} moedas ";
 }

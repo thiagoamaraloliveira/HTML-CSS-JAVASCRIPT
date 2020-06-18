@@ -1,0 +1,45 @@
+@mixin boder-radius($radius){
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    -ms-border-radius:$radius;
+    border-radius: $radius;
+}
+
+@mixin titulo ($size, $color:blue) {
+    color: $color;
+    font-size: $size;
+}
+
+@mixin pad ($values...) {
+    padding: $values;
+    
+}
+
+
+.box {
+    @include boder-radius(10px);
+}
+
+h1 {
+    @include titulo(14px );
+}
+
+h2 {
+    @include titulo(15px,green );
+}
+
+p{
+    @include pad(20px);
+}
+
+p {
+    @include pad(10px 20px);
+}
+
+p {
+    @include pad(10px 20px 40px);
+}
+
+p {
+    @include pad(10px 20px 30px 40px);
+}
