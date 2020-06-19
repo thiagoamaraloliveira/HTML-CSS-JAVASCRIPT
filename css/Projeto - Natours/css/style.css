@@ -48,16 +48,18 @@ body {
   height: 35px;
 }
 
-.text-box{
-    position: absolute;
-    top: 40%; /*? em relacao a pagina*/
-    left: 50%; /*? em relacao a pagina*/
-    transform: translate(-50%,-50%); /* !em relacao a caixa */
+.text-box {
+  position: absolute;
+  top: 40%; /*? em relacao a pagina*/
+  left: 50%; /*? em relacao a pagina*/
+  transform: translate(-50%, -50%); /* !em relacao a caixa */
 }
 
 .heading-primary {
   color: #fff;
   text-transform: uppercase;
+
+  backface-visibility: hidden; /* ! para tirar uma pequena tremida que aparece na animacao*/
 }
 
 .heading-primary-main {
@@ -65,6 +67,14 @@ body {
   font-size: 60px;
   font-weight: 400;
   letter-spacing: 35px;
+
+  animation-name: moveInLeft; /*! chamar a animacao*/
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+  /*
+  animation-delay: 3s;
+  animation-iteration-count: 3;
+  */
 }
 
 .heading-primary-sub {
@@ -72,4 +82,46 @@ body {
   font-size: 20px;
   font-weight: 700;
   letter-spacing: 17.4px;
+
+  animation-name: moveInRight;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+}
+
+@keyframes moveInLeft {
+  /* !Animacao */
+  0% {
+    /* ?Inicio da animacao*/
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+
+  80% {
+    transform: translateX(10px);
+  }
+
+  100% {
+    /*?Fim da animacao */
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@keyframes moveInRight {
+  /* !Animacao */
+  0% {
+    /* ?Inicio da animacao*/
+    opacity: 0;
+    transform: translateX(100px);
+  }
+
+  80% {
+    transform: translateX(-10px);
+  }
+
+  100% {
+    /*?Fim da animacao */
+    opacity: 1;
+    transform: translate(0);
+  }
 }
