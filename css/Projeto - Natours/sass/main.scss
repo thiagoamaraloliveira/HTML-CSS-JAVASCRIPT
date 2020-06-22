@@ -1,0 +1,209 @@
+$color-primary:#55c57a;
+$color-primary-light:#7ed56f;
+$color-primary-dark:#28b485;
+
+
+
+/* !Para toda a pagina*/
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+/*! configurando o ROOT Font Size e utilizando REM para medidas,pois o tamanho da letra se torna dinamica para mobile screen*/
+html {
+  /* ! O padrao é 16px, e eu quero a % equivalente a 10px, então (10/16)*100 = 62.5%*/
+  font-size: 62,5%; /* ? 1 REM == 10px*/
+}
+
+body {
+  font-family: "LATO", sans-serif;
+  font-weight: 400;
+  /*font-size: 16px;*/
+  line-height: 1.7;
+  color: #777;
+  padding: 3rem;
+
+  box-sizing: border-box;
+}
+
+.header {
+  height: 95vh;
+  background-image: linear-gradient(
+      to right bottom,
+      rgba($color-primary-light, 0.4),
+      rgba($color-primary-dark, 0.4)
+    ),
+    url("../img/hero.jpg");
+  background-size: cover;
+  background-position: top;
+  position: relative;
+
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+}
+
+.header__logo-box {
+  position: absolute;
+  top: 4rem;
+  left: 4rem;
+}
+
+.header__logo {
+  height: 3.5rem;
+}
+
+.header__text-box {
+  position: absolute;
+  top: 40%; /*? em relacao a pagina*/
+  left: 50%; /*? em relacao a pagina*/
+  transform: translate(-50%, -50%); /* !em relacao a caixa */
+  text-align: center;
+}
+
+.heading-primary {
+  color: #fff;
+  text-transform: uppercase;
+
+  backface-visibility: hidden; /* ! para tirar uma pequena tremida que aparece na animacao*/
+  margin-bottom: 6rem;
+}
+
+.heading-primary--main {
+  display: block;
+  font-size: 6rem;
+  font-weight: 400;
+  letter-spacing: 3.5rem;
+
+  animation-name: moveInLeft; /*! chamar a animacao*/
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+  /*
+  animation-delay: 3s;
+  animation-iteration-count: 3;
+  */
+}
+
+.heading-primary--sub {
+  display: block;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 1.75rem;
+
+  animation-name: moveInRight;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+}
+
+@keyframes moveInLeft {
+  /* !Animacao */
+  0% {
+    /* ?Inicio da animacao*/
+    opacity: 0;
+    transform: translateX(-10rem);
+  }
+
+  80% {
+    transform: translateX(1rem);
+  }
+
+  100% {
+    /*?Fim da animacao */
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@keyframes moveInRight {
+  /* !Animacao */
+  0% {
+    /* ?Inicio da animacao*/
+    opacity: 0;
+    transform: translateX(10rem);
+  }
+
+  80% {
+    transform: translateX(-1rem);
+  }
+
+  100% {
+    /*?Fim da animacao */
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@keyframes moveInBottom {
+    /* !Animacao */
+    0% {
+      /* ?Inicio da animacao*/
+      opacity: 0;
+      transform: translateY(10rem);
+    }
+    100% {
+      /*?Fim da animacao */
+      opacity: 1;
+      transform: translate(0);
+    }
+  }
+
+.btn:link,
+.btn:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1.5rem 4rem;
+    display: inline-block;
+    border-radius: 10rem;
+    transition: all .2s;
+    font-size: 1.6rem;
+    position: relative;
+}
+
+.btn:hover {
+    transform: translateY(-.3rem); /*! Ao passar o mouse por cima do botao*/
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+}
+.btn:active{ /*! ao clicar no botao*/
+    transform: translateY(-.1rem);
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.2);
+}
+
+.btn--white {
+    background-color: #fff;
+    color: #777;
+    
+    
+}
+
+.btn::after { /* ! */
+    content: ""; /* ? sempre tem que ter*/
+    display: inline-block; /* ? sempre tem que ter, inline-block pq eh um botao */
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .4s;
+    
+}
+
+.btn--white::after{
+    background-color: #fff;
+}
+
+.btn:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
+    
+}
+
+.btn--animated{
+    animation: moveInBottom 0.5s ease-out .75s;
+    animation-fill-mode: backwards;
+    
+
+}
