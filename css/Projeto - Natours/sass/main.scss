@@ -2,6 +2,10 @@ $color-primary:#55c57a;
 $color-primary-light:#7ed56f;
 $color-primary-dark:#28b485;
 
+$color-grey-dark: #777;
+$colo-white: #fff;
+
+
 
 
 /* !Para toda a pagina*/
@@ -24,7 +28,7 @@ body {
   font-weight: 400;
   /*font-size: 16px;*/
   line-height: 1.7;
-  color: #777;
+  color: $color-grey-dark;
   padding: 3rem;
 
   box-sizing: border-box;
@@ -64,7 +68,7 @@ body {
 }
 
 .heading-primary {
-  color: #fff;
+  color: $colo-white;
   text-transform: uppercase;
 
   backface-visibility: hidden; /* ! para tirar uma pequena tremida que aparece na animacao*/
@@ -171,8 +175,8 @@ body {
 }
 
 .btn--white {
-    background-color: #fff;
-    color: #777;
+    background-color:$colo-white;
+    color: $color-grey-dark;
     
     
 }
@@ -192,7 +196,7 @@ body {
 }
 
 .btn--white::after{
-    background-color: #fff;
+    background-color: $colo-white;
 }
 
 .btn:hover::after {
