@@ -17,8 +17,7 @@
   @media only screen and (max-width: $bp-smallest) {
     order: 1;
     flex: 0 0 100%;
-    background-color: var(--color-grey-light-2); 
- 
+    background-color: var(--color-grey-light-2);
   }
 
   &__input {
@@ -133,7 +132,7 @@
   margin-top: 3.5rem;
 
   @media only screen and (max-width: $bp-medium) {
-    display: flex; 
+    display: flex;
     margin: 0;
   }
 
@@ -144,7 +143,7 @@
       margin-bottom: 0.5rem;
 
       @media only screen and (max-width: $bp-medium) {
-        margin-bottom: 0; 
+        margin-bottom: 0;
       }
     }
 
@@ -190,16 +189,14 @@
     align-items: center;
 
     @media only screen and (max-width: $bp-medium) {
-      justify-content: center; 
+      justify-content: center;
       padding: 2rem;
     }
 
     @media only screen and (max-width: $bp-small) {
       flex-direction: column;
-      padding: 1.5rem .5rem;
-     
+      padding: 1.5rem 0.5rem;
     }
-
   }
 
   &__icon {
@@ -210,11 +207,10 @@
 
     @media only screen and (max-width: $bp-small) {
       margin-right: 0;
-      margin-bottom:.7rem;
-      width: 1.5rem;     
-      height: 1.5rem; 
+      margin-bottom: 0.7rem;
+      width: 1.5rem;
+      height: 1.5rem;
     }
-
   }
 }
 
@@ -227,7 +223,7 @@
   padding: 2.5rem;
 
   @media only screen and (max-width: $bp-medium) {
-    display: none; 
+    display: none;
   }
 }
 
@@ -259,7 +255,6 @@
     @media only screen and (max-width: $bp-small) {
       font-size: 1.8rem;
       padding: 1.25rem 2rem;
-     
     }
   }
 
@@ -299,7 +294,6 @@
 
     @media only screen and (max-width: $bp-small) {
       padding: 0 1.5rem;
-     
     }
   }
 
@@ -307,10 +301,9 @@
     font-size: 2.25rem;
     font-weight: 300;
     margin-bottom: -3px;
-    
+
     @media only screen and (max-width: $bp-small) {
       font-size: 1.8rem;
-     
     }
   }
 
@@ -319,8 +312,7 @@
     text-transform: uppercase;
 
     @media only screen and (max-width: $bp-small) {
-      font-size:1.5rem;
-     
+      font-size: 1.5rem;
     }
   }
 }
@@ -406,15 +398,18 @@
     margin-right: 0.7rem;
 
     // Older browsers
-    //background-image: url(../img/chevron-thin-right.svg);
-    //background-size: cover;
+    background-image: url(../img/chevron-thin-right.svg);
+    background-size: cover;
 
     //New browsers -masks
-    background-color: var(--color-primary);
-    --webkit-mask-image: url(../img/chevron-thin-right.svg);
-    --webkit-mask-size: cover;
-    mask-image: url(../img/chevron-thin-right.svg);
-    mask-size: cover;
+    @supports (--webkit-mask-image: url()) or (mask-image: url()) {
+      background-color: var(--color-primary);
+      --webkit-mask-image: url(../img/chevron-thin-right.svg);
+      --webkit-mask-size: cover;
+      mask-image: url(../img/chevron-thin-right.svg);
+      mask-size: cover;
+      background-image: none;
+    }
   }
 }
 
@@ -463,7 +458,7 @@
     padding: 2rem;
     margin-bottom: 3rem;
   }
-  
+
   &__text {
     margin-bottom: 2rem;
     z-index: 10;
